@@ -66,7 +66,7 @@ void pub_callback(float data)
 //     }
 // }
 // ==== setupとloop関数 ====
-void setup()
+extern "C" void setup()
 {
     uart_link.start(); //ros2との通信を開始
     // // ---- SG90を初期化 ----
@@ -81,7 +81,7 @@ void setup()
     // led.off();
 }
 
-void loop()
+extern "C" void loop()
 {
     float value = 3.14f;
 
